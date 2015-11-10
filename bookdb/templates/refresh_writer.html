@@ -1,0 +1,26 @@
+﻿<form method="post">
+  {% csrf_token %}
+<meta charset="utf-8">
+<title>更新|图书管理系统</title>
+<table border=1 align="center">
+
+<br>
+<br />
+<div align="center"><h1> 更新作者信息</h1></div>
+ <tr>
+  <th>姓名</th><th>年龄</th><th>国籍</th><th>操      作</th>
+ </tr>
+ <tr>
+  <td><input name="Name" type="text" value={{author.Name}}></td>
+  <td><input name="Age" type="text"></td>
+  <td><input name="Country" type="text"></td>
+  <td><input type="submit" value="保存">
+ </tr>
+</table>
+<br>
+<br />
+<!--<table border=0  align="center">
+  <div align="center"><A HREF="http://127.0.0.1:8000/view/"   TARGET="v"  TITLE="view">查看书籍列表</A></div>
+</table>
+-->
+</form>

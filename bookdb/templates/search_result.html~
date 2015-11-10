@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>搜索结果|图书管理系统</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+<p><html>
+<body></p>
+<div align="center"><h1>{{Name}}的著作列表</h1></div>
+<table border=1 align="center">
+ <tr>
+  <th>ISBN</th><th>图书名称</th><th>作者</th><th>出版社</th><th>出版日期</th><th>售价</th>
+ </tr>
+{% for book in allbook %}
+ <tr>
+  <td>{{ book.ISBN }}</td>
+  <td><A HREF="http://127.0.0.1:8000/detail/{{book.ISBN}}">{{ book.Title }}</td>
+  <td>{{ book.AuthorID.Name }}</td>
+  <td>{{ book.Publisher }}</td>
+  <td>{{ book.PublishDate }}</td>
+  <td>{{ book.Price }}</td>
+ </tr>
+{% endfor %}
+</table>
+
+<table>
+  <div align="center"><A HREF="http://127.0.0.1:8000/"><button>返回主页</button></A></div>
+</table>
+
+<p></body>
+</html></p>
+
+</body>
+</html>
+<!-- This document was created with MarkdownPad, the Markdown editor for Windows (http://markdownpad.com) -->
